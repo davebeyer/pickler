@@ -1,0 +1,7 @@
+// Copy with actual tokens to config.ts
+
+// Pickler bot token
+export const BOT_TOKEN    = '<fill in>';
+
+// Discord server/guild ID token:
+export const SERVER_ID = '<fill in>';

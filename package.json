@@ -1,0 +1,26 @@
+{
+  "name": "picklescore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davebeyer/picklescore.git"
+  },
+  "author": "Dave Beyer",
+  "license": "SEE LICENSE IN https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode",
+  "bugs": {
+    "url": "https://github.com/davebeyer/picklescore/issues"
+  },
+  "homepage": "https://github.com/davebeyer/picklescore#readme",
+  "dependencies": {
+    "discord.js": "^14.16.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.2"
+  }
+}
