@@ -26,7 +26,7 @@ Also see Python implementation of example (unofficial) use of the API [here](htt
     Fill in limit, offset (e.g., 10, 0), set Own to True (may need to toggle to False & back), set
     query string to "*" (without quotes), set version to v1.0
 
-    Save Palo Alto club id from response
+    Save club id(s) from response 
 
 
 3. Get all club members
@@ -63,5 +63,14 @@ Also see Python implementation of example (unofficial) use of the API [here](htt
 
     Comes with an ID, also a 'DUPR ID', doubles & singles ratings, age, gender, address, etc.
 
+    Interestingly, does not include the singles or doublesReliabilityScore's
+
     (DUPR ID may be best to use since it's visible in the DUPR app's UI.)
+
+
+4. Get Player info (including reliability scores)
+
+    Under Players: /player/v1.0/<player ID>
+
+    Use ID from member info above (not the DUPR ID)
 

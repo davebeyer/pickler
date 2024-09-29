@@ -3,4 +3,6 @@ dist/*.js.map
 
 node_modules
 
+PRIV_NOTES.md
+
 src/config.ts
