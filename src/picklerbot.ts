@@ -27,8 +27,18 @@ export function initPicklerAPI() {
 
             const members = await guild.members.fetch();
 
-            console.log(`\nListing of ${guild.name} members:\n`,
-                        JSON.stringify(members, null, 4));
+            members.each( (member:any) => {
+                console.log(`\nListing of ${guild.name} member:\n`,
+                            JSON.stringify(member, null, 4));
+
+                member.roles.cache.map( (role:any) => {
+                    console.log(`Role: ${role.name}\n`);
+                });
+
+                // member.roles.forEach( (roleId:string) => {
+                // console.log(`\n Role ${roleId}`);
+                // });
+            });
 
             const channel = await client.channels.fetch(PB_FUN_EVENTS_CHANNEL_ID);
             
