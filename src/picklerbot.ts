@@ -109,6 +109,7 @@ async function getAttendeeInfo(eventInfo:any) {
 
     memberInfo.map( (member:any) => {
         console.log(`    ${member.displayName} / ${member.id} / ${member.user.id}`);
+        console.log("Full info:", JSON.stringify(member, null, 4));
     });
 }
 
