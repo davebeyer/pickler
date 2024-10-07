@@ -5,7 +5,9 @@
 --     https://justatheory.com/2012/04/postgres-use-timestamptz/
 --
 
+DROP TABLE IF EXISTS players CASCADE;
 DROP TABLE IF EXISTS dupr_players CASCADE;
+DROP TABLE IF EXISTS discord_members CASCADE;
 
 -- --------------------------------------------------------------
 --
