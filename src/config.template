@@ -5,3 +5,15 @@ export const BOT_TOKEN    = '<fill in>';
 
 // Discord server/guild ID token:
 export const SERVER_ID = '<fill in>';
+
+
+// To get channel id, do /#<channel-name> in discord 
+export const PB_FUN_EVENTS_CHANNEL_ID = '<fill in>';
+
+// right click on sesh App icon in right panel to get userId of sesh bot
+export const SESH_USER_ID = '<fill in>';
+
+// e.g., dave.beyer@gmail.com
+export DUPR_USERNAME = '<fill in>';
+
+export DUPR_PASSWORD = '<fill in>';
