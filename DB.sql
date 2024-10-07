@@ -17,13 +17,6 @@ DROP TABLE IF EXISTS discord_members CASCADE;
 --
 -- --------------------------------------------------------------
 
-CREATE TABLE players (
-    player_id               SERIAL PRIMARY KEY,
-
-    dupr_site_id            BIGINT REFERENCES dupr_players(dupr_site_id) DEFERRABLE,
-    discord_userId          BIGINT REFERENCES discord_members(discord_member_id) DEFERRABLE
-);
-
 CREATE TABLE dupr_players (
     dupr_site_id            BIGINT PRIMARY KEY,
     dupr_id                 TEXT,
@@ -43,7 +36,7 @@ CREATE TABLE dupr_players (
     dupr_singlesProvisional BOOLEAN,
     
     dupr_doubles            TEXT,
-    dupr_doublesProvisional BOOLEAN
+    dupr_doublesProvisional BOOLEAN,
 
     last_updated            TIMESTAMP WITH TIME ZONE
 );
@@ -51,7 +44,7 @@ CREATE TABLE dupr_players (
 CREATE INDEX dupr_players_idx ON dupr_players (dupr_id);
 
 CREATE TABLE discord_members (
-    discord_userId          TEXT PRIMARY KEY,  // could be a BIGINT but too big for JS
+    discord_userId          TEXT PRIMARY KEY,  -- could be a BIGINT but too big for JS
     
     discord_displayName     TEXT,
     discord_nickname        TEXT,
@@ -62,3 +55,11 @@ CREATE TABLE discord_members (
     
     last_updated            TIMESTAMP WITH TIME ZONE
 );
+
+CREATE TABLE players (
+    player_id               SERIAL PRIMARY KEY,
+
+    dupr_site_id            BIGINT REFERENCES dupr_players(dupr_site_id) DEFERRABLE,
+    discord_userId          TEXT REFERENCES discord_members(discord_userId) DEFERRABLE
+);
+
